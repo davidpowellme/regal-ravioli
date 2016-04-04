@@ -1,0 +1,38 @@
+<footer>
+	<div class="copyright">
+		<i class="fa fa-copyright"></i> 2016 Regal Ravioli
+	</div>
+	<div class="social">
+		<a href="https://www.facebook.com/regalravioli/"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.twitter.com/regalravioli/"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.instagram.com/regalravioli/"><i class="fa fa-instagram"></i></a>
+	</div>
+</footer>
+<script>
+
+	//DROPDOWN MENU
+		$('.m-toggle').click(function(){
+	  
+			$('.mainnav').slideToggle(1000);
+		});
+
+
+	//SMOOTH SCROLL
+
+		$('a[href^="#location"]').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    var $target = $(target);
+
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		});
+
+
+
+
+</script>
