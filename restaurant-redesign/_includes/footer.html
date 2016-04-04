@@ -1,22 +1,37 @@
 <footer>
-	<div class="copyright">
-		<i class="fa fa-copyright"></i> 2016 Regal Ravioli
-	</div>
-	<div class="social">
-		<a href="https://www.facebook.com/regalravioli/"><i class="fa fa-facebook"></i></a>
-		<a href="https://www.twitter.com/regalravioli/"><i class="fa fa-twitter"></i></a>
-		<a href="https://www.instagram.com/regalravioli/"><i class="fa fa-instagram"></i></a>
+	<div class="footer-wrapper">
+		<div class="copyright">
+			<i class="fa fa-copyright"></i> 2016 Regal Ravioli
+		</div>
+		<div class="social">
+			<a href="https://www.facebook.com/regalravioli/"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.twitter.com/regalravioli/"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.instagram.com/regalravioli/"><i class="fa fa-instagram"></i></a>
+		</div>
 	</div>
 </footer>
 <script>
 
 	//DROPDOWN MENU
-		$('.m-toggle').click(function(){
-	  
-			$('.mainnav').slideToggle(1000);
-		});
+	function menu(){
+		if( $(window).width() >= 650){
+			$('.mainnav').css('display', 'block');
+			} else {
+				$('.mainnav').css('display', 'none');
+			}
+		} 
+
+	$('.m-toggle').click(function(e){
+		e.preventDefault();
+		$('.mainnav').slideToggle(1000);
+	});
 
 
+	menu();
+
+	$(window).resize(function(){
+		menu();
+	});
 	//SMOOTH SCROLL
 
 		$('a[href^="#location"]').on('click',function (e) {
@@ -29,9 +44,28 @@
 		        'scrollTop': $target.offset().top
 		    }, 900, 'swing', function () {
 		        window.location.hash = target;
+		        console.log(target);
 		    });
 		});
 
+	//Greeting
+
+	var thehours = new Date().getHours();
+	var themessage = '';
+	var open = 'open now';
+	var closingTime = 'closed now';
+
+	if (thehours >= 10 && thehours < 20) {
+		themessage = open; 
+
+	} else {
+		themessage = closingTime;
+		$('.dot').css('background', '#6B3710');
+	}
+
+	
+
+	$('.greeting').append(themessage);
 
 
 

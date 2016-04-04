@@ -134,19 +134,26 @@ HEADER
 
 		.m-toggle {
 			display: block;
+			float: right;
+			margin-top: -4.5rem;
 			padding: 1.5rem;
-			.fa {
+		}
+		.fa {
 				font-size: 1.5rem;
 			}
 	}
-	}
 
 	@media (min-width: 900px) {
+		.header-wrapper {
+			margin: 0 auto;
+			width: 90%;
+		}
 		.logo {
 			margin: 0.5rem;
 		}
 		.mainnav {
 			padding: 0.5rem 0.25rem;
+
 		}
 	}
 }
@@ -191,6 +198,7 @@ BANNER
 		font-size: 3rem;
 		margin: 0 auto;
 		max-width: 600px;
+		width: 80%;
 	}
 
 	p {
@@ -198,9 +206,15 @@ BANNER
 	}
 }
 
+@media (min-width: 650px) and (max-width: 900px) {
+	.banner {
+		margin-top: 10rem;
+	}
+}
+
 @media (min-width: 900px) {
 	.banner {
-		padding: 15rem;
+		padding: 10rem;
 
 		h1 {
 			font-size: 5rem;
@@ -461,7 +475,7 @@ MENU
 ==============
 */
  .menu {
- 	margin: 0 auto;
+ 	margin: 4rem auto 0 auto;
  	overflow: hidden;
 	//width: 95%;
 
@@ -522,7 +536,17 @@ MENU
  		}
  	}
  }	
-	
+	@media (min-width: 650px) and (max-width: 900px) {
+		.menu {			// $('.mainnav').css('display','none');
+
+			margin-top: 6rem;
+		}
+
+		.mainnav {
+			display: block;
+		}
+	}
+
 	@media (min-width: 650px) {
 		.menu-border:last-child {
 			border-left: 10px solid $primary-color;
@@ -550,6 +574,11 @@ footer {
 	border-top: $border;
 	overflow: hidden;
 	padding: 0.5rem;
+
+	.footer-wrapper {
+		margin: 0 auto;
+		width: 90%;
+	}
 	
 	.copyright {
 		float: left;
@@ -559,6 +588,10 @@ footer {
 		float: right;
 		font-size: 2rem;
 		padding-right: 1rem;
+
+		.fa {
+			margin: 0 0.5rem;
+		}
 
 		a:hover {
 			color: lighten($primary-color, 5%);

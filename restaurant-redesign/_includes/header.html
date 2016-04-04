@@ -1,18 +1,20 @@
 <header class="site-header">
-	<div class="col-sm-10 col-md-5 col-lg-5">
-	<a href="../index.html" class="logo">
-		Regal Ravioli
-	</a>
-	</div>
-	<div class="col-sm-2 m-toggle"><i class="fa fa-chevron-down"></i></div>
+	<div class="header-wrapper">
+		<div class="logo-wrapper col-lg-5">
+		<a href="../index.html" class="logo">
+			Regal Ravioli
+		</a>
+		<i class="fa fa-chevron-down m-toggle"></i>
+		</div>
 		<nav class="col-sm-12 col-lg-7 mainnav">
-		<ul class="col-lg-8">
-			<li class="col-lg-4"><a href="../menu.html">Menu</a></li>
-			<li class="col-lg-4"><a href="#location">Location</a></li>
-			<li class="col-lg-4"><a href="#">FAQ</a></li>
-		</ul>
-		<div class="open-close-top col-lg-4">
-		<div class="dot"></div> <span>we're open now</span>
+			<ul class="col-lg-8">
+				<li class="col-lg-4"><a href="../menu.html">Menu</a></li>
+				<li class="col-lg-4"><a {% if page.url == "/menu.html" %} href="/index.html#location"{% else %} href="#location" {% endif %} >Location</a></li>
+				<li class="col-lg-4"><a href="#">FAQ</a></li>
+			</ul>
+			<div class="open-close-top col-lg-4">
+			<div class="dot"></div> <span class="greeting"></span>
+			</div>
+		</nav>
 	</div>
-	</nav>
 </header>
