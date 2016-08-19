@@ -3,21 +3,26 @@
 
 html {
   font-size: 16px;
-  color: #5a2a24; }
+  color: #6B3710; }
+
+body {
+  background: #FFFEFB;
+  font-family: "source-sans-pro", sans-serif; }
 
 img {
   max-width: 100%; }
 
 a {
-  color: #5a2a24;
-  font-weight: 700; }
+  color: #6B3710;
+  font-weight: 600; }
   a:hover {
-    color: #a71817; }
+    color: #814213; }
 
 .wrapper {
   overflow: hidden; }
 
 h1 {
+  color: #6B3710;
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center; }
@@ -26,6 +31,7 @@ h2 {
   font-size: 1.3rem;
   font-style: italic;
   font-weight: 400;
+  margin-top: 2rem;
   text-transform: uppercase; }
 
 /*
@@ -34,22 +40,26 @@ HEADER
 ==============
 */
 .site-header {
-  background: #fff;
+  background: #FFFEFB;
+  box-shadow: 1px 0 1px black;
   line-height: 1.4;
-  overflow: hidden;
+  position: fixed;
   width: 100%; }
   .site-header .logo {
-    border: 2px solid #5a2a24;
-    color: #5a2a24;
+    border: 2px solid #864616;
+    color: #6B3710;
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     padding: 0.25rem 0.5rem;
     text-align: center;
     text-decoration: none;
     width: 15rem; }
+  .site-header .m-toggle {
+    display: none; }
   .site-header nav.mainnav {
+    display: none;
     font-size: 1.25rem;
     overflow: hidden; }
     .site-header nav.mainnav ul {
@@ -64,17 +74,27 @@ HEADER
         text-align: center;
         width: 33%; }
         .site-header nav.mainnav ul li a {
-          color: #5a2a24;
+          color: #6B3710;
           font-weight: normal;
           text-decoration: none; }
           .site-header nav.mainnav ul li a:hover {
-            color: #a71817;
+            color: #814213;
             text-decoration: underline; }
   @media (max-width: 650px) {
-    .site-header nav.mainnav {
-      border-top: 2px solid #5a2a24;
-      border-bottom: 2px solid #5a2a24; } }
+    .site-header .mainnav {
+      border-top: 2px solid #864616;
+      display: block; }
+    .site-header .m-toggle {
+      display: block;
+      float: right;
+      margin-top: -4.5rem;
+      padding: 1.5rem; }
+    .site-header .fa {
+      font-size: 1.5rem; } }
   @media (min-width: 900px) {
+    .site-header .header-wrapper {
+      margin: 0 auto;
+      width: 90%; }
     .site-header .logo {
       margin: 0.5rem; }
     .site-header .mainnav {
@@ -88,13 +108,14 @@ BANNER
 .banner {
   background: url(/images/hero-pasta.jpg) 0 0 no-repeat;
   background-size: cover;
+  margin-top: 3.5rem;
   padding: 5rem 0;
   position: relative;
   width: 100%;
   z-index: -1; }
   .banner:after {
     content: " ";
-    background: #000;
+    background: #3C1F09;
     height: 100%;
     left: 0;
     opacity: 0.4;
@@ -103,22 +124,30 @@ BANNER
     width: 100%;
     z-index: -1; }
   .banner h1,
-  .banner h2 {
-    color: #fff;
+  .banner p {
+    color: #FFFEFB;
     opacity: 1;
     text-align: center;
-    text-shadow: #5a2a24 2px 2px;
+    text-shadow: #6B3710 2px 2px;
     z-index: 1; }
   .banner h1 {
-    font-size: 3rem; }
-  .banner h2 {
-    font-size: 1.75rem; }
+    font-size: 3rem;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 80%; }
+  .banner p {
+    font-size: 1.5rem; }
 
+@media (min-width: 650px) and (max-width: 900px) {
+  .banner {
+    margin-top: 10rem; } }
 @media (min-width: 900px) {
   .banner {
-    padding: 15rem; }
+    padding: 10rem; }
     .banner h1 {
-      font-size: 5rem; } }
+      font-size: 5rem; }
+    .banner p {
+      font-size: 2rem; } }
 /*
 ==============
 OPEN/CLOSE
@@ -126,14 +155,14 @@ OPEN/CLOSE
 */
 .open-close,
 .open-close-top {
-  border-top: 2px solid #5a2a24;
-  border-bottom: 2px solid #5a2a24;
+  border-top: 2px solid #864616;
+  border-bottom: 2px solid #864616;
   margin-bottom: 0.5rem;
   padding: 0.5rem 0;
   text-align: center; }
   .open-close .dot,
   .open-close-top .dot {
-    background: #bada55;
+    background: #94E846;
     border-radius: 50%;
     display: inline-block;
     height: 0.75rem;
@@ -169,7 +198,7 @@ SPECIALS
   overflow: hidden;
   width: 95%; }
   .specials .spec-item {
-    border: 2px solid #5a2a24;
+    border: 2px solid #864616;
     margin: 0 auto 2rem auto;
     overflow: hidden; }
     .specials .spec-item img {
@@ -187,20 +216,20 @@ SPECIALS
         .specials .spec-item .info h2 span:last-child {
           text-align: center; }
       .specials .spec-item .info p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 0.5rem; }
     .specials .spec-item .follow {
-      background: #5a2a24;
-      border-top: 2px solid #5a2a24;
+      background: #6B3710;
+      border-top: 2px solid #864616;
       clear: both;
-      color: #fff;
-      font-size: 1.5rem;
+      color: #FFFEFB;
+      font-size: 1.25rem;
       margin: 0;
       text-align: center;
       text-decoration: none; }
       .specials .spec-item .follow:hover {
-        background: #fff;
-        color: #a71817;
+        background: #814213;
+        color: #FFFEFB;
         text-decoration: none; }
 
 @media (min-width: 650px) {
@@ -215,7 +244,7 @@ XTRA
 ==============
 */
 .xtra {
-  background: #b1c0f2;
+  background: #DBDFEC;
   font-size: 1.5rem;
   overflow: hidden;
   padding: 4.375rem 1rem; }
@@ -228,7 +257,7 @@ XTRA
     .xtra i #wine {
       margin-top: 1rem; }
   .xtra p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.5rem;
     text-align: center; }
     .xtra p span {
@@ -252,9 +281,10 @@ HOURS
   background: #d8d2b0;
   padding: 1rem; }
   .hours h1 {
+    color: #6B3710;
     margin-top: 4rem; }
   .hours p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     text-align: center; }
     .hours p span {
@@ -274,12 +304,14 @@ LOCATION
   overflow: hidden;
   padding: 1rem; }
   .location p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     padding: 0.5rem;
     text-align: center; }
     .location p a {
-      font-size: 1.75rem; }
+      font-size: 1.5rem; }
+      .location p a:hover {
+        color: #814213; }
   .location iframe {
     max-width: 100%;
     padding: 1rem; }
@@ -290,10 +322,10 @@ MENU
 ==============
 */
 .menu {
-  margin: 0 auto;
-  overflow: hidden;
-  width: 95%; }
+  margin: 4rem auto 0 auto;
+  overflow: hidden; }
   .menu h1 {
+    color: #E88241;
     text-align: left; }
   .menu h2 {
     overflow: hidden; }
@@ -302,40 +334,47 @@ MENU
       text-align: center; }
   .menu section {
     padding: 2.5rem; }
+    .menu section .intro-box {
+      background: #d8d2b0;
+      margin: 3.5rem auto 0 auto;
+      max-width: 34rem;
+      padding: 2rem; }
     .menu section article:first-child {
-      border-bottom: 4px dotted black; }
+      border-bottom: 4px dotted #6B3710; }
     .menu section p {
       font-weight: bold; }
     .menu section .number {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      margin: 2rem 0;
-      text-align: center; }
+      margin: 2rem auto;
+      max-width: 30rem; }
     .menu section .intro,
     .menu section .catering {
       margin: 0 auto;
       max-width: 30rem;
       width: 100%; }
-    .menu section .catering {
-      border: 2px solid #5a2a24;
-      padding: 1rem; }
     .menu section .more {
       font-style: italic;
       font-weight: normal; }
     .menu section .intro {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: normal;
-      line-height: 1.4;
-      margin-top: 3rem; }
+      line-height: 1.4; }
 
+@media (min-width: 650px) and (max-width: 900px) {
+  .menu {
+    margin-top: 6rem; }
+
+  .mainnav {
+    display: block; } }
 @media (min-width: 650px) {
   .menu-border:last-child {
-    border-left: 10px solid #5a2a24;
+    border-left: 10px solid #6B3710;
     border-left-style: double;
     margin: 2rem 0; } }
 @media (min-width: 900px) {
   .menu-border {
-    border-left: 10px solid #5a2a24;
+    border-left: 10px solid #6B3710;
     border-left-style: double;
     margin: 2rem 0; } }
 /*
@@ -344,9 +383,12 @@ FOOTER
 ==============
 */
 footer {
-  border-top: 2px solid #5a2a24;
+  border-top: 2px solid #864616;
   overflow: hidden;
   padding: 0.5rem; }
+  footer .footer-wrapper {
+    margin: 0 auto;
+    width: 90%; }
   footer .copyright {
     float: left;
     padding: 0.5rem; }
@@ -354,6 +396,10 @@ footer {
     float: right;
     font-size: 2rem;
     padding-right: 1rem; }
+    footer .social .fa {
+      margin: 0 0.5rem; }
+    footer .social a:hover {
+      color: #814213; }
 
 /*
 ==============

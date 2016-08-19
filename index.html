@@ -1,56 +1,18 @@
-<!DOCTYPE html>
-<html>
-
-  <!--This include tag adds /_includes/head.html to every page that has layout: default in the front matter -->
-
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Regal Ravioli | Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="https://use.typekit.net/yto0lhn.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-
-
-  <body>
-    
-    <!--This include tag adds /_includes/header.html to every page that has layout: default in the front matter -->
-    <header class="site-header">
-	<div class="col-lg-5">
-	<a href="../index.html" class="logo">
-		Regal Ravioli
-	</a>
-	</div>
-		<nav class="col-lg-7 mainnav">
-		<ul class="col-lg-8">
-			<li class="col-lg-4"><a href="../menu.html">Menu</a></li>
-			<li class="col-lg-4"><a href="../index.html/#location">Location</a></li>
-			<li class="col-lg-4"><a href="#">FAQ</a></li>
-		</ul>
-		<div class="open-close-top col-lg-4">
-		<div class="dot"></div> <span>we're open now</span>
-	</div>
-	</nav>
-</header>
-
-
-      <div class="wrapper">
-        <!--Any content underneath the front matter in a page that has layout: default will be inserted here-->
-        <section class="banner">
+---
+layout: default
+title: Home
+---
+<section class="banner">
 	<div class="jumbo-text">
-		<h1>Handmade Ravioli</h1>
-		<h2>Made with love daily</h2>
+		<h1>Austin's Ravioli Food Truck</h1>
+		<p>Handmade, Authentic, Delicious</p>
 	</div>
 </section>
 <section class="open-close">
-	<div class="dot"></div> <span>we're open now</span>
+	<div class="dot"></div> <span class="greeting"></span>
 </section>
 <section class="specials">
-	<h1>Specials</h1>
+	<h1>Weekly Specials</h1>
 	<article class="spec-item col-sm-12 col-md-12 col-lg-12">
 		<div class="spec-info">
 			<div class="col-sm-12 col-md-4 col-lg-4"><img src="/images/meat.jpg" alt=""></div>
@@ -93,9 +55,9 @@
 	<p>Open Mon - Sat<br>
 	<span>Noon - 10PM</span><br>
 	Open Sun<br>
-	<span>3PM - 8PM</span></p>
+	<span id="location" >3PM - 8PM</span></p>
 </section>
-<section id="location" class="location col-sm-12 col-md-12 col-lg-12">
+<section class="location col-sm-12 col-md-12 col-lg-12">
 	<article class="col-sm-12 col-md-6 col-lg-6">
 		<h1>Location</h1>
 		<p>1502 S First Street<br>Austin, TX 78704<br>
@@ -105,22 +67,3 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3446.544111562737!2d-97.75772598488005!3d30.25007448180796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b4e60a4dac1b%3A0x22396b919419af7e!2sRegal+Ravioli!5e0!3m2!1sen!2sus!4v1458418153074" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</article>
 </section>
-
-      </div>
-    
-    <!--This include tag adds /_includes/footer.html to every page that has layout: default in the front matter -->
-    <footer>
-	<div class="copyright">
-		<i class="fa fa-copyright"></i> 2016 Regal Ravioli
-	</div>
-	<div class="social">
-		<a href="https://www.facebook.com/regalravioli/"><i class="fa fa-facebook"></i></a>
-		<a href="https://www.twitter.com/regalravioli/"><i class="fa fa-twitter"></i></a>
-		<a href="https://www.instagram.com/regalravioli/"><i class="fa fa-instagram"></i></a>
-	</div>
-</footer>
-
-
-  </body>
-
-</html>
