@@ -1,7 +1,8 @@
 title: Regal Ravioli
-url: "http://davidpowell.me/regal-ravioli" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: "/regal-ravioli"
+url: "http://davidpowellme.github.io" # the base hostname & protocol for your site
+twitter_username: davidpowellme
+github_username:  davidpowellme
 
 # Build settings
 markdown: kramdown
